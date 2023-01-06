@@ -41,7 +41,7 @@ jobs:
           file: ./Dockerfile
           platform: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/springboot-app-${{ github.event.commits[0].id }}:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/springboot-app:${{ github.event.commits[0].id }}-latest
       # push后，用ssh连接服务器执行脚本
       # - name: SSH
       #   uses: fifsky/ssh-action@master
